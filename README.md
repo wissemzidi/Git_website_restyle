@@ -1,5 +1,13 @@
 # git_learning
-studying git and github
 
-#for contact
-#Email: wissem.zidi.ofc@gmail.com
+## for contact
+### Email: wissem.zidi.ofc@gmail.com
+
+## reason
+#### learning git and git-hub
+
+## content
+#### -index .file
+#### -css .folder
+#### -assets .folder
+#### -java script .file
