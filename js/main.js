@@ -5,5 +5,4 @@ function hide () {
 
 function show () {
   document.getElementById("side-bar").style.right = "0";
-  document.getElementById("side-bar").style.right = "0";
 }
