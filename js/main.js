@@ -1,5 +1,5 @@
 function hide () {
-  document.getElementById("side-bar").style.right = "-200vw";
+  document.getElementById("side-bar").style.right = "-100vw";
 }
 
 

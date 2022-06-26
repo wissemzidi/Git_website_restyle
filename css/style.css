@@ -46,7 +46,7 @@ body{
 aside{
   display: grid;
   position: absolute;
-  right: -200vw;
+  right: 100vw;
   min-height: 100vh;
   min-width: 100vw;
   text-align: center;
@@ -55,8 +55,8 @@ aside{
   'title'
   'nav'
   'nav';
-  grid-template-rows: 1fr 1fr 1fr;  /*  X-arxes */
-  grid-template-columns: 1fr;   /*  Y-arxes */
+  grid-template-rows: 1fr 1fr 1fr;  /*  X-axes */
+  grid-template-columns: 1fr;   /*  Y-axes */
   transition: 0.75s ease all;
   z-index: 999999;
 }
