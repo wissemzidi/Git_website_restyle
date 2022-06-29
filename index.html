@@ -8,12 +8,11 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
   <link rel="shortcut icon" href="">
-  <script type="text/javascript" src="js/main.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <title>Testing git-hub</title>
+  <title>git</title>
 </head>
-<body>
+<body data-test="light">
 
   <aside id="side-bar">
     <div id="title">
@@ -28,8 +27,13 @@
         <li><a href="#">Sign-in</a></li>
       </ul>
     </nav>
+    <button id="switch_theme" type="button">
+      <ion-icon name="moon-outline"></ion-icon>
+    </button>
     <div id="hide-side-bar">
-      <button id="hide-side-bar-btn" type="button" onclick=hide()><ion-icon name="close-circle-outline"></ion-icon></button>
+      <button id="hide-side-bar-btn" class="hide-side-bar-btn" type="button">
+        <ion-icon name="close-circle-outline"></ion-icon>
+      </button>
     </div>
   </aside>
 
@@ -39,8 +43,14 @@
       <img src="assets/img/logo@2x.png" alt="">
     </div>
     <div id="show-side-bar">
-      <button id="show-side-bar-btn" type="button" onclick=show()>
-        <ion-icon name="grid-outline"></ion-icon>
+      <button id="show-side-bar-btn" class="show-side-bar-btn" type="button">
+      <ion-icon name="grid-outline"></ion-icon>
+      </button>
+    </div>
+    <div id="search-bar">
+      <input class="search-input" type="text">
+      <button class="search-btn">
+        <ion-icon class="search-icon" name="search"></ion-icon>
       </button>
     </div>
   </header>
@@ -54,4 +64,5 @@
 
 
 </body>
+<script type="text/javascript" src="js/main.js"></script>
 </html>

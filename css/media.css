@@ -1,0 +1,13 @@
+@media screen and (max-width: 420px) {
+  #search-bar{
+    top: 0.5rem;
+    margin-left: 1rem;
+  }
+  #brand > img{
+    height: calc(46px / 1.5);
+    width: calc(110px / 1.5);
+  }
+  #show-side-bar > #show-side-bar-btn{
+    font-size: calc(clamp(2rem, 2vw, 7rem) / 1.25);
+  }
+}
