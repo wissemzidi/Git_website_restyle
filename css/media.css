@@ -1,4 +1,38 @@
-@media screen and (max-width: 420px) {
+@media screen and (min-width: 1445px) {
+
+}
+
+@media screen and (max-width: 1250px) {
+  #page1{
+    flex-direction: row;
+    gap: 5vw;
+  }
+}
+
+
+@media screen and (max-width: 980px) {
+  #page1{
+    flex-direction: column;
+    gap: 3vh;
+  }
+  #page1 > div{
+    max-height: fit-content;
+    width: 90%;
+    margin: 0 auto;
+    padding: .5em 1em;
+    text-align: center;
+  }
+}
+
+
+
+@media screen and (max-width: 450px) {
+  body{
+    width: 100vw;
+  }
+  aside{
+    width: 100vw;
+  }
   #search-bar{
     top: 0.5rem;
     margin-left: 1rem;
@@ -10,4 +44,5 @@
   #show-side-bar > #show-side-bar-btn{
     font-size: calc(clamp(2rem, 2vw, 7rem) / 1.25);
   }
+
 }

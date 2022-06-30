@@ -24,8 +24,9 @@ const sideBarQuery = document.querySelector('aside');
 
 function darking() {
   console.log("darking")
-  root.style.setProperty('--clr-background', '#000000');
+  root.style.setProperty('--clr-background', '#272727');
   root.style.setProperty('--clr-font', '#f7f7f7');
+  root.style.setProperty('--clr-primary-600', '#4cdbfb');
   body.setAttribute('data-test', 'dark')
   switch_theme.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>'
 }
@@ -35,6 +36,7 @@ function lightning() {
   body.setAttribute('data-test', 'light')
   root.style.setProperty('--clr-background', '#f7f7f7');
   root.style.setProperty('--clr-font', '#000000e6');
+  root.style.setProperty('--clr-primary-600', '#000000e6');
   switch_theme.innerHTML = '<ion-icon name="moon-outline"></ion-icon>'
 }
 
@@ -44,14 +46,19 @@ function lightning() {
   // main
 showSideBarBtn.addEventListener('click', () => {
     console.log('showing-side-bar')
-    sideBar.style.display = 'grid'
-    sideBar.style.right = "0"
+    sideBar.style.display = 'flex'
+    // sideBar.style.right = "0"
+    body.style.overflowY = 'hidden'
+    sideBar.style.overflowX = 'auto'
+    sideBar.setAttribute('data-side-bar', 'open')
 })
 
 hideSideBarBtn.addEventListener('click', () => {
   console.log('hiding-side-bar')
-  sideBar.style.right = "-200vw"
+  // sideBar.style.right = "-200vw"
   sideBar.style.display = 'none'
+  body.style.overflowY = 'auto'
+  sideBar.setAttribute('data-side-bar', 'close')
 })
 
 
