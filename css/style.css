@@ -78,6 +78,10 @@ body{
   font-size: 2rem;
 }
 
+#up_btn a{
+  color: var(--clr-font);
+}
+
 
 aside{
   display: none;
