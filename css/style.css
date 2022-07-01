@@ -291,7 +291,7 @@ header{
   font-size:  min(2.5vw, 1.1rem);
   font-weight: var(--main-weight);
   width: calc(100% + 3vw);
-  color: var(--clr-font);
+  color: var(--clr-black-low);
 }
 
 .search-btn{
