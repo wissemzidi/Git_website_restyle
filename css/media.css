@@ -59,6 +59,10 @@
   }
   aside{
     width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
   }
   #search-bar{
     top: 0.5rem;

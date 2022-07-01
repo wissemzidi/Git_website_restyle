@@ -11,6 +11,8 @@ const hideSideBarBtn = document.getElementById('hide-side-bar-btn')
 const sideBar = document.getElementById('side-bar');
 const sideBarQuery = document.querySelector('aside');
 
+const asideLink = document.querySelector('.aside_link')
+
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
   console.log("darking")
@@ -47,8 +49,16 @@ showSideBarBtn.addEventListener('click', () => {
     console.log('showing-side-bar')
     sideBar.style.display = 'flex'
     // sideBar.style.right = "0"
-    body.style.overflowY = 'hidden'
-    sideBar.style.overflowX = 'auto'
+    document.getElementById("main").style.overflow = 'hidden'
+    body.style.overflow = 'hidden'
+    sideBar.style.overflow = 'auto'
+    sideBar.style.transform = 'translateX(50vw)'
+    sideBar.style.opacity = 0
+    window.setTimeout(function(){
+      sideBar.style.transform = 'translateX(0)'
+      sideBar.style.opacity = 1
+    },0);
+    document.getElementById("up_btn").style.display = 'none'
     sideBar.setAttribute('data-side-bar', 'open')
 })
 
@@ -57,6 +67,7 @@ hideSideBarBtn.addEventListener('click', () => {
   // sideBar.style.right = "-200vw"
   sideBar.style.display = 'none'
   body.style.overflowY = 'auto'
+  document.getElementById("up_btn").style.display = 'inline'
   sideBar.setAttribute('data-side-bar', 'close')
 })
 
@@ -71,3 +82,23 @@ switch_theme.addEventListener('click', () => {
     document.getElementById("switch_theme").style.transform = 'rotate(360deg)';
   }
 })
+
+
+
+// asideLink.addEventListener('click', () => {
+//   console.log('side_bar_link_clicked')
+//   // sideBar.style.right = "-200vw"
+//   sideBar.style.display = 'none'
+//   body.style.overflowY = 'auto'
+//   document.getElementById("up_btn").style.display = 'inline'
+//   sideBar.setAttribute('data-side-bar', 'close')
+// })
+
+
+function side_bar_link_clicked() {
+  console.log('side_bar_link_clicked')
+  sideBar.style.display = 'none'
+  body.style.overflowY = 'auto'
+  document.getElementById("up_btn").style.display = 'inline'
+  sideBar.setAttribute('data-side-bar', 'close')
+}
