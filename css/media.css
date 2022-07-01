@@ -1,3 +1,10 @@
+@media (hover: none) {
+  #page2 div{
+    box-shadow:0 0 10px -5px var(--clr-primary-600);
+  }
+}
+
+
 @media screen and (min-width: 1445px) {
 
 }
@@ -22,6 +29,26 @@
     padding: .5em 1em;
     text-align: center;
   }
+  #page2{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #page2 div{
+    gap: 2vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+  #page2 div:hover{
+    transform: scale(1.15);
+  }
+  #page4 img{
+    width: 100%;
+  }
+  #page5{
+    margin: 5vw auto;
+  }
 }
 
 
@@ -44,5 +71,10 @@
   #show-side-bar > #show-side-bar-btn{
     font-size: calc(clamp(2rem, 2vw, 7rem) / 1.25);
   }
+}
 
+@media screen and (max-width: 350px) {
+  #page4 p{
+    right: -.5rem;
+  }
 }

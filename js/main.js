@@ -12,15 +12,14 @@ const sideBar = document.getElementById('side-bar');
 const sideBarQuery = document.querySelector('aside');
 
 
-//   // functions
-// function hide () {
-//   document.getElementById("side-bar").style.right = "-200vw";
-// }
-
-
-// function show () {
-//   document.getElementById("side-bar").style.right = "0";
-// }
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  console.log("darking")
+  root.style.setProperty('--clr-background', '#272727');
+  root.style.setProperty('--clr-font', '#f7f7f7');
+  root.style.setProperty('--clr-primary-600', '#4cdbfb');
+  body.setAttribute('data-test', 'dark')
+  switch_theme.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>'
+}
 
 function darking() {
   console.log("darking")
