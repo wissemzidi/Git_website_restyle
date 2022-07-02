@@ -1,4 +1,3 @@
-
 // constants
 const switch_theme = document.querySelector("#switch_theme")
 const darkTheme = document.getElementById('#dark');
@@ -14,14 +13,15 @@ const sideBarQuery = document.querySelector('aside');
 const asideLink = document.querySelector('.aside_link')
 
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  console.log("darking")
-  root.style.setProperty('--clr-background', '#272727');
-  root.style.setProperty('--clr-font', '#f7f7f7');
-  root.style.setProperty('--clr-primary-600', '#4cdbfb');
-  body.setAttribute('data-test', 'dark')
-  switch_theme.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>'
-}
+
+// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+//   console.log("darking")
+//   root.style.setProperty('--clr-background', '#272727');
+//   root.style.setProperty('--clr-font', '#f7f7f7');
+//   root.style.setProperty('--clr-primary-600', '#4cdbfb');
+//   body.setAttribute('data-test', 'dark')
+//   switch_theme.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>'
+// }
 
 function darking() {
   console.log("darking")
@@ -51,11 +51,12 @@ showSideBarBtn.addEventListener('click', () => {
     // sideBar.style.right = "0"
     document.getElementById("main").style.overflow = 'hidden'
     body.style.overflow = 'hidden'
-    sideBar.style.overflow = 'auto'
-    sideBar.style.transform = 'translateX(50vw)'
+    sideBar.style.overflowY = 'auto'
+    sideBar.style.overflowX = 'hidden'
+    // sideBar.style.transform = 'translateX(50%)'
     sideBar.style.opacity = 0
     window.setTimeout(function(){
-      sideBar.style.transform = 'translateX(0)'
+      // sideBar.style.transform = 'translateX(0)'
       sideBar.style.opacity = 1
     },0);
     document.getElementById("up_btn").style.display = 'none'

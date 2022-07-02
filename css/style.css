@@ -87,11 +87,12 @@ body{
 
 aside{
   display: none;
+  inset: 0;
   padding-right: 1rem;
   padding-left: 1rem;
   background-color: var(--clr-background);
   z-index: 99999;
-  max-height: 100rem;
+  max-height: 100vh;
   transition: 0.75s ease all;
 }
 
