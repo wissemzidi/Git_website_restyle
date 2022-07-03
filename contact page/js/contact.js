@@ -9,19 +9,22 @@ const showSideBarBtn = document.getElementById('show-side-bar-btn')
 const hideSideBarBtn = document.getElementById('hide-side-bar-btn')
 const sideBar = document.getElementById('side-bar');
 const sideBarQuery = document.querySelector('aside');
+const main = document.getElementById("main")
 
 const asideLink = document.querySelector('.aside_link')
 
 
 
-// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//   console.log("darking")
-//   root.style.setProperty('--clr-background', '#272727');
-//   root.style.setProperty('--clr-font', '#f7f7f7');
-//   root.style.setProperty('--clr-primary-600', '#4cdbfb');
-//   body.setAttribute('data-test', 'dark')
-//   switch_theme.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>'
-// }
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  console.log("darking")
+  root.style.setProperty('--clr-background', '#272727');
+  root.style.setProperty('--clr-font', '#f7f7f7');
+  root.style.setProperty('--clr-primary-600', '#4cdbfb');
+  body.setAttribute('data-test', 'dark')
+  switch_theme.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>'
+}
+
+
 
 function darking() {
   console.log("darking")
@@ -44,33 +47,32 @@ function lightning() {
 
 
 
-  // main
+  // showing side bar
 showSideBarBtn.addEventListener('click', () => {
     console.log('showing-side-bar')
     sideBar.style.display = 'flex'
     // sideBar.style.right = "0"
-    document.getElementById("main").style.overflow = 'hidden'
+    main.style.overflow = 'hidden'
     body.style.overflow = 'hidden'
     sideBar.style.overflowY = 'auto'
     sideBar.style.overflowX = 'hidden'
-    // sideBar.style.transform = 'translateX(50%)'
     sideBar.style.opacity = 0
     window.setTimeout(function(){
-      // sideBar.style.transform = 'translateX(0)'
       sideBar.style.opacity = 1
     },0);
     document.getElementById("up_btn").style.display = 'none'
     sideBar.setAttribute('data-side-bar', 'open')
 })
 
+  // hiding side bar
 hideSideBarBtn.addEventListener('click', () => {
   console.log('hiding-side-bar')
-  // sideBar.style.right = "-200vw"
   sideBar.style.display = 'none'
   body.style.overflowY = 'auto'
   document.getElementById("up_btn").style.display = 'inline'
   sideBar.setAttribute('data-side-bar', 'close')
 })
+
 
 
 
@@ -84,16 +86,6 @@ switch_theme.addEventListener('click', () => {
   }
 })
 
-
-
-// asideLink.addEventListener('click', () => {
-//   console.log('side_bar_link_clicked')
-//   // sideBar.style.right = "-200vw"
-//   sideBar.style.display = 'none'
-//   body.style.overflowY = 'auto'
-//   document.getElementById("up_btn").style.display = 'inline'
-//   sideBar.setAttribute('data-side-bar', 'close')
-// })
 
 
 function side_bar_link_clicked() {

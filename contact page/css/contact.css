@@ -3,20 +3,12 @@
 
 :root{
 
-  /* font-sizes */
-  --page-title: 36px;
-  --main-title: 30px;
-  --title: 24px;
-  --sous-title: 18px;
-  --text: 16px;
-  --sous-text: 14px;
-  --min-text: 12px;
-
   /* font-weight */
-  --main-weight: 700;
-  --weight: 500;
-  --min-weight: 400;
-  --extra-min-weight: 300;
+  --fw-bold: 700;
+  --fw-big: 500;
+  --fw-weight: 400;
+  --fw-min-weight: 300;
+
 
   /* colors */
   --clr-background: #f7f7f7;
@@ -68,6 +60,12 @@ body{
   transition: 0.75s all ease;
 }
 
+@media screen and (max-width: 600px) {
+ body{
+  width: 100vw;
+ } 
+}
+
 
 
 
@@ -86,7 +84,7 @@ body{
 
 
 aside{
-  display: flex;
+  display: none;
   inset: 0;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -227,4 +225,209 @@ aside #hide-side-bar #hide-side-bar-btn{
 
 aside #hide-side-bar:hover #hide-side-bar-btn{
   transform: scale(1.25);
+}
+
+
+
+
+
+
+/* header */
+
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 2vw 4vw;
+  position: relative;
+}
+
+#brand{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1vw;
+}
+
+#brand > img{
+  margin-top: 0.25rem;
+  height: calc(46px - .5vw);
+  width: calc(110px - 1vw);
+}
+
+#show-side-bar > #show-side-bar-btn{
+  background-color: transparent;
+  border: none;
+  font-size: clamp(2rem, 2vw, 7rem);
+  color: var(--clr-font);
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+#show-side-bar > #show-side-bar-btn:hover{
+  transform: scale(1.2);
+}
+
+
+
+
+#main{
+  width: 100%;
+}
+
+
+
+#page1{
+  width: min(90vw, 90rem);
+  display: grid;
+  place-items: center;
+  color: var(--clr-font);
+}
+
+
+#line1{
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 5vh;
+}
+
+#name{
+  width: fit-content;
+}
+
+#name label{
+  font-size: clamp(1rem, 1.5vw, 3rem);
+  color: var(--clr-font);
+}
+
+#name input{
+  margin-top: .5em;
+  padding: 0.2em 0.4em;
+  width: min(70vw, 20rem);
+  height: fit-content;
+  font-size: clamp(1rem, 1vw, 2rem);
+  color: var(--clr-font);
+  background-color: var(--clr-background);
+  border: none;
+  box-shadow: 0 0 15px -5px var(--clr-font);
+  border-radius: 10px;
+  transition: 0.3s all ease-out;
+}
+
+#name input:hover,
+#name input:focus-visible{
+  transform: translateY(-.1rem) scale(1.075);
+}
+
+#email{
+  width: fit-content;
+}
+
+#email label{
+  font-size: clamp(1rem, 1.5vw, 3rem);
+  color: var(--clr-font);
+}
+
+#email input{
+  margin-top: .5em;
+  padding: 0.2em 0.4em;
+  width: min(70vw, 20rem);
+  height: fit-content;
+  font-size: clamp(1rem, 1vw, 2rem);
+  color: var(--clr-font);
+  background-color: var(--clr-background);
+  border: none;
+  box-shadow: 0 0 15px -5px var(--clr-font);
+  border-radius: 10px;
+  transition: 0.3s all ease-out;
+}
+
+#email input:hover,
+#email input:focus-visible{
+  transform: translateY(-.1rem) scale(1.075);
+}
+
+
+#subject{
+  width: fit-content;
+}
+
+#subject h3{
+  text-align: center;
+  font-size: clamp(1.5rem, 2vw, 4rem);
+  font-weight: 500;
+  color: var(--clr-font);
+  margin: 1em 0;
+}
+
+#subject #select{
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+#subject input{
+  margin-left: min(3vw, 5rem);
+  margin-bottom: 2rem;
+  width: clamp(1rem, 1.5vw, 3rem);
+  height: clamp(1rem, 1.5vw, 3rem);
+  background-color: var(--clr-background);
+  color: var(--clr-font);
+  box-shadow: 0 0 20px -7px var(--clr-font);
+  border: none;
+  margin-top: 0.4em;
+}
+
+#subject label{
+  font-size: clamp(1rem, 1.5vw, 3rem);
+}
+
+#text{
+  margin: 2rem;
+  width: fit-content;
+}
+
+#text label{
+  font-size: clamp(1.5rem, 2vw, 4rem);
+  font-weight: 500;
+  color: var(--clr-font);
+}
+
+#text input{
+  margin-top: 1rem;
+  text-align: left;
+  padding: .4em;
+  padding-bottom: 9rem;
+  width: min(80vw,40rem);
+  min-height: 10em;
+  font-size: clamp(1rem, 1vw, 2rem);
+  color: var(--clr-font);
+  background-color: var(--clr-background);
+  border: none;
+  border-radius: 7.5px;
+  box-shadow: 0 0 15px -5px var(--clr-font);
+  transition: 0.3s all ease-out;
+}
+
+#text input:hover,
+#text input:focus-visible{
+  border: none;
+  transform: translateY(-.2em) scale(1.05);
+}
+
+#submit__btn{
+  margin: 2rem;
+  border-radius: .2em;
+  border: none;
+  background-color: transparent;
+  padding: .2em .4em;
+  font-size: clamp(1rem, 1vw, 2rem);
+  box-shadow: 0 0 15px -5px var(--clr-font);
+  transition: 0.3s all ease-out;
+  color: var(--clr-font);
+}
+
+#submit__btn:hover,
+#submit__btn:focus-visible{
+  transform: translateY(-.2em) scale(1.1);
 }
