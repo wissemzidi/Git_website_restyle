@@ -55,7 +55,7 @@
     <section id="page1">
       <div id="line1">
         <div id="name">
-          <label for="email__input">Enter name</label><br>
+          <label for="name__input">Enter name</label><br>
           <input id="name__input" type="text">
         </div>
         <div id="email">
@@ -72,14 +72,18 @@
           <label for="subject__label">Info</label>
           <input id="subject__select" name="subject_select" type="radio">
           <label for="subject__label">Help</label>
-          <input id="subject__select" name="subject_select" type="radio">
-          <label for="subject__label">opinion</label>
-          <input id="subject__select" name="subject_select" type="radio">
-          <label for="subject__label">other</label>
+          <span class="break_point">
+            <input id="subject__select" name="subject_select" type="radio">
+            <label for="subject__label">opinion</label>
+          </span>
+          <span class="break_point">
+            <input id="subject__select" name="subject_select" type="radio">
+            <label for="subject__label">other</label>
+          </span>
         </section>
       </div>
       <div id="text">
-        <label for="text__input">What you want to tell us</label><br>
+        <label for="text__input">What you want to <span class="break_point">tell us</span></label><br>
         <input id="text__input" type="text">
       </div>
       <div id="submit">
