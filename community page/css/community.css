@@ -279,3 +279,43 @@ header{
 
 
 
+#page1{
+  width: min(90vw, 90rem);
+  display: grid;
+  place-items: center;
+}
+
+.paragraph{
+  color: var(--clr-font);
+  width: min(90vw, 60rem);
+  padding: 2rem;
+  margin: 5vmin 0;
+}
+
+.paragraph h2{
+  font-size: clamp(2rem, 1vw, 3rem);
+  opacity: .95;
+  transform: translate(-5%);
+  color: var(--clr-primary-700);
+  font-weight: var(--fw-weight);
+}
+
+.paragraph p{
+  font-size: 1rem;
+  opacity: .98;
+  font-weight: var(--fw-min-weight);
+}
+
+
+@media screen and (max-width: 450px) {
+  #main{
+    width: 100vw;
+  }
+  #page1{
+    width: 100vw;
+  }
+  .paragraph{
+    padding: .5rem;
+  }
+
+}

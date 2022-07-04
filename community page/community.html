@@ -25,8 +25,8 @@
         <ul>
           <li><a onclick=side_bar_link_clicked() href="../index.html">Home</a></li>
           <li><a onclick=side_bar_link_clicked() href="../index.html">About</a></li>
-          <li><a onclick=side_bar_link_clicked() href="../">More</a></li>
-          <li><a onclick=side_bar_link_clicked() href="#header">Contact</a></li>
+          <li><a onclick=side_bar_link_clicked() href="../contact page/contact.html">Contact</a></li>
+          <li><a onclick=side_bar_link_clicked() href="../community page/community.html"><span style="color: var(--clr-primary-700);">> Community</span></a></li>
         </ul>
       </nav>
     </section>
@@ -51,7 +51,34 @@
     </header>
 
     <section id="page1">
+      <div class="paragraph">
+        <h2>Mailing List</h2>
+        <p>
+          General questions or comments for the Git community can be sent to the mailing list by using the email address git@vger.kernel.org.
 
+          If you wish to report any possible bug for Git, please use this mailing list as well.
+          
+          You do not need to subscribe: you will be Cc'd in replies. Please keep the Cc list intact when replying (use "Reply to all"). Greylisting may delay your first post for a few hours. Note also that the list only accepts plain-text email; please disable HTML in your outgoing messages.
+          
+          By subscribing (click here), you can make sure you're not missing follow-up discussions and you can also learn about other development in the community. The list archive can be found on public-inbox.
+          
+          Windows-specific questions can also be sent to the Git for Windows mailing list (if in doubt whether your question is Windows-specific, just use the general Git mailing list). Please submit Windows-specific bugs to Git for Windows' bug tracker.
+          
+          There is also Git user mailing list on Google Groups which is a nice place for beginners to ask about anything. If you're a downstream packager of Git, consider joining the Git packagers mailing list for low-volume announcements from the developers, as well as other discussion related to packaging & porting Git.
+        </p>
+      </div>
+      <div class="paragraph">
+        <h2>Bug Reporting</h2>
+        <p>
+          Bugs in git can be reported directly to the mailing list (see above for details). Note that you do not need to subscribe to the list to send to it. You can help us out by attempting to reproduce the bug in the latest released version of git, or if you're willing to build git from source, the next branch. Sometimes an attempted fix may be pending in this branch, in which case your feedback as to whether the fix worked for you will be appreciated.
+
+          If you are using git 2.27.0 or later, you can run git bugreport in the repository where you observed the bug, which generates a template to guide you through writing a useful bug report and gathers some diagnostic information about your environment.
+          
+          Bugs related to this website can be reported at its issue tracker. Bugs related to the content of the "Pro Git" book can be reported at its issue tracker.
+          
+          If you are new to submitting bugs, you might find this guide helpful for producing useful bug reports.
+        </p>
+      </div>
     </section>
   </main>
 

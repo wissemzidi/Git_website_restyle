@@ -208,6 +208,7 @@ aside #nav ul li:hover{
   transform: scale(1.5);
 }
 
+
 aside #nav ul li a{
   color: var(--clr-font);
   filter: drop-shadow(5px 10px 2px var(--light-black));
