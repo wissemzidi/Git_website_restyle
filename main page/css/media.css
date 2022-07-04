@@ -2,6 +2,9 @@
   #page2 div{
     box-shadow:0 0 10px -5px var(--clr-primary-600);
   }
+  #page5 div{
+    box-shadow:0 0 12px -5px var(--clr-primary-700);
+  }
 }
 
 
@@ -74,6 +77,9 @@
   }
   #show-side-bar > #show-side-bar-btn{
     font-size: calc(clamp(2rem, 2vw, 7rem) / 1.25);
+  }
+  #page5{
+    display: grid;
   }
 }
 
