@@ -19,7 +19,7 @@
   --extra-min-weight: 300;
 
   /* colors */
-  --clr-background: #f7f7f7;
+  --clr-background: rgba(179, 207, 226, 0.2);
   --clr-font: #272727;
   --clr-black-low: #4c4c4c;
   --clr-white-low: #dfdfdf;
@@ -57,6 +57,7 @@
 html{
   scroll-behavior: smooth;
   position: relative;
+  filter: brightness(.95);
 }
 
 
